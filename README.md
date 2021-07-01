@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# react-tailwindcss-storybook-sample
+
+A sample React project using [TailwindCSS](https://tailwindcss.com/docs/guides/create-react-app) and [Storybook](https://storybook.js.org/docs/react/get-started/introduction).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Objective
+
+I wanted to test using TailwindCSS in making components.
+Although there is a steep learning curve in using TailwindCSS, it looks very promising if you want to make all your components from sratch.
 
 ## Available Scripts
 
