@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # Objective
 
 I wanted to test using TailwindCSS in making components.
-Although there is a steep learning curve in using TailwindCSS, it looks very promising if you want to make all your components from sratch.
+Although there is a steep learning curve in using TailwindCSS, it looks very promising if you want to make all your components from scratch.
 
 ## Available Scripts
 
