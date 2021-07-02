@@ -1,23 +1,35 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Avatar from './Avatar';
 
-function Person(props) {
+function Person({ round = false, data: { name, work, image }}) {
+
+    const size = round ? {width: "w-20", height: "h-20"} : {width: "w-28", height: "h-28", rounded: false}
+
     return (
-        <div className="rounded-xl overflow-hidden shadow-md flex bg-white">
-            <div className="w-full h-full flex">
-                <div className="flex-initial w-28 h-28 flex justify-center items-center">
-                    <Avatar width="w-20" height="h-20" src={`${process.env.PUBLIC_URL}/photo_2.jpg`}/>
+        <div className="rounded-xl overflow-hidden shadow-md flex bg-white dark:bg-gray-700">
+            <div className="flex justify-center overflow-hidden w-full">
+                <div className="w-28 h-28 flex-none flex justify-center items-center">
+                    <Avatar {...size} src={image}/>
                 </div>
-                <div className="flex-auto flex items-center">
-                    <div className="p-2 flex-auto overflow-hidden">
-                        <div className="text-green-500 font-bold truncate">Do dsd sdsd ckak</div>
-                        <div className="text-gray-500 truncate">Marketing shshgaga17273</div>
+                <div className="flex-grow truncate">
+                    <div className="pt-5 pl-2">
+                        <div className="truncate text-lg text-green-500 font-bold">{ name }</div>
+                        <div className="text-gray-500 leading-tight truncate dark:text-gray-300">{ work }</div>
                     </div>
                 </div>
             </div>
         </div>
     )
+}
+
+Person.propTypes = {
+    data: PropTypes.shape({
+        name: PropTypes.string,
+        work: PropTypes.string,
+        image: PropTypes.string,
+    }),
+    round: PropTypes.bool,
 }
 
 export default Person;

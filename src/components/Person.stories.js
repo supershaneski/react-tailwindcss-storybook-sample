@@ -17,16 +17,34 @@ export const actionsData = {
 }
 */
 
-/*
-export const defaultRadioData = {
-    checked: false,
-}
-*/
 
-const Template = () => <Person/>
+export const defaultPersonData = {
+    data: {
+        name: "Allan Johnson",
+        work: "Engineer",
+    },
+    round: false,
+}
+
+
+const Template = () => <Person {...defaultPersonData}/>
 
 export const Default = Template.bind({})
 
 Default.parameters = {
+    controls: { hideNoControlsWarning: true }
+}
+
+const roundedPersonData = {
+    ...defaultPersonData,
+    round: true,
+}
+
+
+const Template2 = () => <Person {...roundedPersonData}/>
+
+export const Rounded = Template2.bind({})
+
+Rounded.parameters = {
     controls: { hideNoControlsWarning: true }
 }
